@@ -9,6 +9,7 @@
         <module>application_module_2</module>
         <module>application_module_3</module>
         <module>application_module_4</module>
+        <module>application_module_5</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -19,7 +20,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-            
     </properties>
 
     <dependencies>
@@ -50,7 +50,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <argLine>-Xmx2G ${argLine}</argLine>
+                    <argLine>-Xmx2G</argLine>
                 </configuration>
             </plugin>
 
