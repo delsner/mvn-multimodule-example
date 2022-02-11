@@ -29,5 +29,10 @@ JNIEXPORT jstring JNICALL Java_de_doubleslash_demo_coverage_module_five_JniWrapp
     (*env)->ReleaseStringUTFChars(env, resultString, str);
     (*env)->DeleteLocalRef(env, jStringPayload);
     (*env)->DeleteLocalRef(env, arraylist);
+    if (0 == 0) {
+        printf("Yay\n");
+    } else {
+        printf("Nay\n");
+    }
     return (*env)->NewStringUTF(env, STRING_RETURN);
 }

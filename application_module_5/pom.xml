@@ -131,6 +131,8 @@
                                 <compilerStartOption>${env.JAVA_HOME}\include</compilerStartOption>
                                 <compilerStartOption>-I</compilerStartOption>
                                 <compilerStartOption>${env.JAVA_HOME}\include\win32</compilerStartOption>
+                                <compilerStartOption>/DEBUG</compilerStartOption>
+                                <compilerStartOption>/ZI</compilerStartOption>
                             </compilerStartOptions>
                             <linkerOutputDirectory>target</linkerOutputDirectory>
                             <linkerProvider>msvc</linkerProvider>
