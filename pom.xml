@@ -106,6 +106,16 @@
             </build>
         </profile>
         <profile>
+            <id>ttrace-deprecated</id>
+            <dependencies>
+                <dependency>
+                    <groupId>edu.tum.ttrace</groupId>
+                    <artifactId>ttrace-listener</artifactId>
+                    <version>0.0.1</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
             <id>ttrace</id>
             <dependencies>
                 <dependency>
