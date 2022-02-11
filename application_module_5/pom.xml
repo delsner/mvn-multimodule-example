@@ -139,6 +139,7 @@
                             <linkerStartOptions>
                                 <linkerStartOption>/INCREMENTAL:NO</linkerStartOption>
                                 <linkerStartOption>/DLL</linkerStartOption>
+                                <linkerStartOption>/DEBUG</linkerStartOption>
                             </linkerStartOptions>
                         </configuration>
                         <executions>
