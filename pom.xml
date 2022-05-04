@@ -125,5 +125,15 @@
                 </dependency>
             </dependencies>
         </profile>
+        <profile>
+            <id>binaryrts</id>
+            <dependencies>
+                <dependency>
+                    <groupId>edu.tum.sse.binaryrts</groupId>
+                    <artifactId>junit-test-listener</artifactId>
+                    <version>1.0-SNAPSHOT</version>
+                </dependency>
+            </dependencies>
+        </profile>
     </profiles>
 </project>
