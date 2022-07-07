@@ -190,15 +190,13 @@
                         </goals>
                         <configuration>
                             <workingDirectory>${project.basedir}</workingDirectory>
-                            <executable>javah</executable>
+                            <executable>javac</executable>
                             <arguments>
-                                <argument>-verbose</argument>
-                                <argument>-jni</argument>
+                                <argument>-h</argument>
+                                <argument>${project.basedir}/src/native/include</argument>
                                 <argument>-classpath</argument>
                                 <argument>${project.build.sourceDirectory}</argument>
-                                <argument>-d</argument>
-                                <argument>${project.basedir}/src/native/include</argument>
-                                <argument>de.doubleslash.demo.coverage.module.five.JniWrapper</argument>
+                                <argument>${project.basedir}/src/main/java/de/doubleslash/demo/coverage/module/five/JniWrapper.java</argument>
                             </arguments>
                         </configuration>
                     </execution>
