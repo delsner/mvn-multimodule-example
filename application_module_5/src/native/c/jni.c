@@ -6,9 +6,21 @@
 #define STRING_CALLBACK_STATIC "Hello world static callback!"
 #define STRING_PAYLOAD "Simple payload string"
 
+int custom_max(int a, int b) {
+    int c = a > b ? a : b;
+    fprintf(stderr, "Max of a=%d and b=%d is %d\n", a, b, c);
+    return c;
+}
+
+int custom_min(int a, int b) {
+    int c = a > b ? b : a;
+    fprintf(stderr, "Min of a=%d and b=%d is %d\n", a, b, c);
+    return c;
+}
+
 JNIEXPORT jstring JNICALL Java_de_doubleslash_demo_coverage_module_five_JniWrapper_getString(JNIEnv *env, jobject thiz) {
     fprintf(stderr, "Max before: \n");
-    max(20, 3);
+    custom_max(20, 3);
     jclass cls_foo = (*env)->GetObjectClass(env, thiz);
     jmethodID callback = (*env)->GetMethodID(env, cls_foo, "callback", "(Ljava/lang/String;)V");
     jmethodID callbackWithObject = (*env)->GetMethodID(env, cls_foo, "callbackObject", "(Ljava/util/List;)Ljava/lang/String;");
@@ -37,20 +49,8 @@ JNIEXPORT jstring JNICALL Java_de_doubleslash_demo_coverage_module_five_JniWrapp
         fprintf(stderr, "Nay\n");
     }
     fprintf(stderr, "Max after: \n");
-    max(4, 93);
+    custom_max(4, 93);
     fprintf(stderr, "Min after: \n");
-    min(4, 93);
+    custom_min(4, 93);
     return (*env)->NewStringUTF(env, STRING_RETURN);
-}
-
-int max(int a, int b) {
-    int c = a > b ? a : b;
-    fprintf(stderr, "Max of a=%d and b=%d is %d\n", a, b, c);
-    return c;
-}
-
-int min(int a, int b) {
-    int c = a > b ? b : a;
-    fprintf(stderr, "Min of a=%d and b=%d is %d\n", a, b, c);
-    return c;
 }
